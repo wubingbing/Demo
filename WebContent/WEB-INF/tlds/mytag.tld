@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ 
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <description>A tag library exercising SimpleTag handlers.</description>
+    <tlib-version>1.0</tlib-version>
+ 
+  <short-name>examples</short-name>
+  <uri>/demotag</uri>
+  <description>
+    A simple tab library for the examples
+  </description>
+ 
+ <tag>
+   <!-- 标签名 -->
+    <name>demo</name>
+    <!-- 标签处理器类 -->
+    <tag-class>tag.tld.SimpleTagDemo</tag-class>
+    <!-- 标签体允许的内容 -->
+    <body-content>scriptless</body-content>
+    
+    <!-- 标签的属性描述 -->
+    <attribute>
+
+            <description>描述标签的count属性</description>
+            <!-- 标签的count属性 -->
+            <name>count</name>
+            <required>true</required>
+            <!-- rtexprvalue用来指示标签的属性值是否可以是一个表达式，
+                        一般设置为true,true就表示允许标签的属性值可以是一个表达式-->
+            <rtexprvalue>true</rtexprvalue>
+ 
+    </attribute>
+    
+ </tag>
+ 
+</taglib>
